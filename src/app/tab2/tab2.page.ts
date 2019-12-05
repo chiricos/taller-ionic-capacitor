@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { PeliService } from '../services/peli.service';
+import { iPelis } from '../model/iPelis.interface';
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +10,17 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  results: Observable<iPelis>;
+  term: string = "";
+  type: string = "";
+
+  constructor(private peliservice:PeliService) { }
+
+  ngOnInit() { 
+  }
+
+  searchChanged() {
+    this.results = this.peliservice.searchMovies(this.term, this.type);
+  }
 
 }
