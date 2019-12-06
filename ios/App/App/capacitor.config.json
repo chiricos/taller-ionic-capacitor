@@ -1,0 +1,8 @@
+{
+  "appId": "www.taller.test",
+  "appName": "taller",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

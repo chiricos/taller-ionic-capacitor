@@ -15,7 +15,6 @@ export class PeliService {
 
   searchMovies(title:string, type:string) {
     this.url = `http://www.omdbapi.com/?s=${encodeURI(title)}&type=${type}&apikey=${this.apiKey}`;
-    console.log(this.url);
     return this.http.get<iPelis>(this.url).pipe(map(results => results['Search']));
   }
 

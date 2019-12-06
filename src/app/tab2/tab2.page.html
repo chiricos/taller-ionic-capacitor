@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title text-center>
-      Mys peliculas
+      Mis peliculas
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,7 +11,7 @@
     <ion-item>
       <ion-label>Seleccione pelicula</ion-label>
       <ion-select [(ngModel)]="type" (ionChange)="searchChanged($event)">
-        <ion-select-option selectd="true" value="">All</ion-select-option>
+        <ion-select-option selectd="true" value="">Todas</ion-select-option>
         <ion-select-option value="movie">movie</ion-select-option>
         <ion-select-option value="series">series</ion-select-option>
         <ion-select-option value="episode">episode</ion-select-option>
